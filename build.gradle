@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'net.ltgt.apt' version '0.10'
+}
+
+group 'pl.jch'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.apache.poi:poi-ooxml:3.17'
+    compile 'org.apache.commons:commons-lang3:3.7'
+
+    compileOnly 'org.projectlombok:lombok:1.16.20'
+
+    apt "org.projectlombok:lombok:1.16.20"
+
+    testCompile 'junit:junit:4.12'
+}

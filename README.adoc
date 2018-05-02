@@ -1,0 +1,6 @@
+= simple-excel
+
+This project provides functionality to quickly read and write
+tabular Excel file.
+
+Project is basing on https://poi.apache.org/[Apache POI].
