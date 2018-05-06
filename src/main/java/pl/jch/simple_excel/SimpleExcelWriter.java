@@ -45,6 +45,9 @@ public class SimpleExcelWriter {
         InternalWriter.write(builder, dataSetList, outputStream);
     }
 
+    /**
+     * This class is intended to serve single workbook write operation.
+     */
     private static class InternalWriter {
 
         private final SimpleExcelWriterBuilder builder;
@@ -600,11 +603,6 @@ public class SimpleExcelWriter {
         public SimpleExcelWriter build() {
             return this.parentBuilder.build();
         }
-    }
-
-    public enum WorkbookType {
-        HSSF,
-        XSSF
     }
 
 }
