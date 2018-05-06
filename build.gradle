@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'net.ltgt.apt' version '0.15'
-//    id 'checkstyle'
+    id 'checkstyle'
 }
 
 group 'pl.jch'
@@ -18,6 +18,8 @@ dependencies {
     compile 'org.apache.commons:commons-lang3:3.7'
 
     compileOnly 'org.projectlombok:lombok:1.16.20'
+
+    checkstyle 'com.puppycrawl.tools:checkstyle:8.10'
 
     annotationProcessor "org.projectlombok:lombok:1.16.20"
 

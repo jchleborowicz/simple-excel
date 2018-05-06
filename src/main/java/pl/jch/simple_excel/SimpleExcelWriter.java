@@ -1,9 +1,9 @@
 package pl.jch.simple_excel;
 
-import pl.jch.simple_excel.impl.SimpleExcelWriterBuilderImpl;
-
 import java.io.IOException;
 import java.io.OutputStream;
+
+import pl.jch.simple_excel.impl.SimpleExcelWriterBuilderImpl;
 
 public interface SimpleExcelWriter {
 

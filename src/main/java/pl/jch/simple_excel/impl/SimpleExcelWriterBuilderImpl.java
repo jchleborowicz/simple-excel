@@ -1,5 +1,12 @@
 package pl.jch.simple_excel.impl;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -9,13 +16,6 @@ import pl.jch.simple_excel.SimpleExcelWriter;
 import pl.jch.simple_excel.SimpleExcelWriterBuilder;
 import pl.jch.simple_excel.StyleInitializerContext;
 import pl.jch.simple_excel.WorkbookType;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 import static org.apache.commons.lang3.Validate.notEmpty;
 import static org.apache.commons.lang3.Validate.notNull;
@@ -121,7 +121,8 @@ public final class SimpleExcelWriterBuilderImpl implements SimpleExcelWriterBuil
     }
 
     BiConsumer<CellStyle, StyleInitializerContext> getStyle(String baseStyleName,
-                                                            BiConsumer<CellStyle, StyleInitializerContext> styleInitializer) {
+                                                            BiConsumer<CellStyle,
+                                                                    StyleInitializerContext> styleInitializer) {
         if (baseStyleName != null) {
             final BiConsumer<CellStyle, StyleInitializerContext> baseInitializer =
                     this.styleInitializersByName.get(baseStyleName);

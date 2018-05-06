@@ -1,5 +1,14 @@
 package pl.jch.simple_excel.impl;
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -13,19 +22,11 @@ import pl.jch.simple_excel.SimpleExcelException;
 import pl.jch.simple_excel.StyleInitializerContext;
 import pl.jch.simple_excel.WorkbookType;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
-
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 import static org.apache.commons.lang3.Validate.notNull;
+
 
 /**
  * This class is intended to serve single workbook write operation.
@@ -138,9 +139,9 @@ class InternalExcelWriter {
         }
 
         if (!sheetBuilder.rowClass.isInstance(rowData)) {
-            throw new SimpleExcelException("Unexpected data object class for sheet \"" +
-                    sheetBuilder.getSheetName() + ". Data index: " + index + ". Expected data class: " +
-                    sheetBuilder.rowClass.getName() + ", actual data class: " + rowData.getClass().getName());
+            throw new SimpleExcelException("Unexpected data object class for sheet \""
+                    + sheetBuilder.getSheetName() + ". Data index: " + index + ". Expected data class: "
+                    + sheetBuilder.rowClass.getName() + ", actual data class: " + rowData.getClass().getName());
         }
 
         CellStyle[] cellStyles = new CellStyle[sheetBuilder.columnBuilders.size()];

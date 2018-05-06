@@ -1,11 +1,11 @@
 package pl.jch.simple_excel;
 
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Font;
 import org.apache.poi.ss.usermodel.Workbook;
-
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 public interface SimpleExcelWriterBuilder {
 

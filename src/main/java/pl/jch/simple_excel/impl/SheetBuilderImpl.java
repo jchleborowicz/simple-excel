@@ -1,5 +1,10 @@
 package pl.jch.simple_excel.impl;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+
 import lombok.Getter;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -8,11 +13,6 @@ import pl.jch.simple_excel.SheetBuilder;
 import pl.jch.simple_excel.SimpleExcelException;
 import pl.jch.simple_excel.SimpleExcelWriter;
 import pl.jch.simple_excel.StyleInitializerContext;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.BiConsumer;
-import java.util.function.Consumer;
 
 import static org.apache.commons.lang3.Validate.notEmpty;
 import static org.apache.commons.lang3.Validate.notNull;

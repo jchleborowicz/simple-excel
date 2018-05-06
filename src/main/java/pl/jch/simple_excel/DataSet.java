@@ -1,8 +1,8 @@
 package pl.jch.simple_excel;
 
-import lombok.Value;
-
 import java.util.List;
+
+import lombok.Value;
 
 @Value(staticConstructor = "of")
 public class DataSet {

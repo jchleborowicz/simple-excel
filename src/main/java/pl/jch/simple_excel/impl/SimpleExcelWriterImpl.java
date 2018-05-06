@@ -1,14 +1,14 @@
 package pl.jch.simple_excel.impl;
 
-import org.apache.commons.lang3.ObjectUtils;
-import pl.jch.simple_excel.DataSet;
-import pl.jch.simple_excel.SimpleExcelWriter;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.commons.lang3.ObjectUtils;
+import pl.jch.simple_excel.DataSet;
+import pl.jch.simple_excel.SimpleExcelWriter;
 
 public class SimpleExcelWriterImpl implements SimpleExcelWriter {
 

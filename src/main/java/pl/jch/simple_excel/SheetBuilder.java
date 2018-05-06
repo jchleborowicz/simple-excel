@@ -1,10 +1,10 @@
 package pl.jch.simple_excel;
 
-import org.apache.poi.ss.usermodel.CellStyle;
-import org.apache.poi.ss.usermodel.Sheet;
-
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Sheet;
 
 public interface SheetBuilder<T> {
     SheetBuilder<Object> sheet(String name);
